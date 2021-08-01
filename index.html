@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="navbar-brand">OneDestinationFurniture</div>
+      <ul class="navbar-nav ms-auto">
+        <li class="navbar-item">
+          <!-- <a href="" class="nav-link">HOME</a> -->
+        </li>
+      </ul>
+    </nav>
+
+    <section id="id">
+      <div class="row">
+        <div class="col-lg-6 block1">
+          <h1>
+            Explore Your <br />
+            Favourite Property!
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Accusantium, <br />
+            natus aliquam! Alias quos dicta quo facere mollitia suscipit
+            perferendis at.
+          </p>
+          <button class="btn btn-dark">Explore Properties</button>
+
+          <ul>
+            <li class="btnn active"></li>
+            <li class="btnn"></li>
+            <li class="btnn"></li>
+          </ul>
+        </div>
+        <div class="col-lg-6 block2">
+          <img src="pic1.png" alt="" class="image-class">
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+  <script>
+
+    var button = document.querySelectorAll(".btnn");
+    var displayImage = document.querySelector(".image-class");
+
+    button[0].addEventListener("click", function () {
+      displayImage.setAttribute("src", "pic1.png");
+      animation();
+      this.classList.add("active");
+
+    });
+
+    button[1].addEventListener("click", function () {
+      displayImage.setAttribute("src", "pic2.png");
+      animation();
+      this.classList.add("active");
+
+    });
+    button[2].addEventListener("click", function () {
+      displayImage.setAttribute("src", "pic3.png");
+      animation();
+      this.classList.add("active");
+
+    });
+
+    function animation() {
+      displayImage.classList.add("zoom");
+      setTimeout(function () {
+        displayImage.classList.remove("zoom");
+      }, 500);
+
+      for (b of button) {
+        b.classList.remove("active");
+
+      }
+    }
+
+
+
+  </script>
+</body>
+
+</html>
